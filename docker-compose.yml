@@ -1,0 +1,10 @@
+version: '1.0'
+services:
+  pip-cacher:
+    volumes:
+      - './packages:/pythonCacher/packages'
+    ports:
+      - "8000:8000"
+    container_name: pip-cacher
+    image: lvega23/pip-cacher:latest
+    restart: always
